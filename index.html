@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Carros y Rompecabezas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CONTENEDOR DEL JUEGO DE CARROS -->
+    <div id="game-section" class="section">
+        <h1>Carrera en la Pista</h1>
+        <div class="hud">
+            <span>Tiempo: <span id="timer">30</span>s</span>
+            <span>Vidas/Gasolina: <span id="lives">3</span></span>
+        </div>
+        
+        <div id="canvas-container">
+            <canvas id="carCanvas" width="300" height="500"></canvas>
+            
+            <!-- Pantalla de inicio superpuesta -->
+            <div id="start-screen" class="overlay">
+                <h2>Listo para la carrera</h2>
+                <button id="start-btn">Iniciar Juego</button>
+            </div>
+
+            <!-- Pantalla de Game Over / Siguiente -->
+            <div id="end-screen" class="overlay hidden">
+                <h2 id="end-message">¡Juego Terminado!</h2>
+                <button id="restart-btn">Reiniciar Carros</button>
+                <button id="next-game-btn" class="hidden">Siguiente Juego (Rompecabezas)</button>
+            </div>
+        </div>
+        <p>Usa las flechas <b>Izquierda</b> y <b>Derecha</b> para cambiar de carril.</p>
+    </div>
+
+    <!-- CONTENEDOR DEL ROMPECABEZAS (Oculto al inicio) -->
+    <div id="puzzle-section" class="section hidden">
+        <h1>Rompecabezas de 8 Dígitos</h1>
+        <p>Ordena los números del 1 al 8 usando el espacio vacío (0).</p>
+        <div id="puzzle-board"></div>
+        <p id="puzzle-message"></p>
+        <button id="reset-puzzle-btn">Reiniciar Rompecabezas</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
