@@ -1,2 +1,2 @@
 # juego-de-carros
-juega si acabar las vidas y resuelve el ropecabezas
+juega sin acabar las vidas y resuelve el ropecabezas
